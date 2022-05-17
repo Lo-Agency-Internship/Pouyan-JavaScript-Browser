@@ -1,0 +1,127 @@
+* {
+  text-align: center;
+}
+body {
+  background-color: antiquewhite;
+}
+.header p {
+  background-color: rgb(255 160 0);
+  /* border: 1px solid; */
+  border-radius: 20px;
+  width: 10%;
+  height: 31px;
+  margin: 2.5% auto 2% auto;
+  /* border: gainsboro; */
+  position: relative;
+  /* top: -18px; */
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+/* ----------------------------- */
+li {
+  display: inline-block;
+}
+li input:hover {
+    cursor: pointer;;
+  }
+  
+input {
+  text-decoration: none;
+  color: black;
+  background-color: blanchedalmond;
+  border: none;
+  width: 111%;
+  height: 37px;
+  border-radius: 11px;
+}
+
+.buttons {
+  border: 3px solid white;
+  border-radius: 20px;
+  padding: 7px;
+  padding-left: 0px;
+  margin: 0px 45px 6px 26px;
+  background-color: blanchedalmond;
+width: 70px;}
+
+.buttons:hover {
+    background-color: rgb(236, 174, 81);
+    color: white;
+    cursor: pointer;
+  }
+#category {
+  font-weight: bolder;
+  color: #6d3a33;
+  font-size: 20px;
+}
+/* -------------search--------------- */
+.search {
+  background-color: rgb(237 172 100);
+  width: 69%;
+  height: 31px;
+  border-radius: 14px;
+  margin: 0 auto;
+  margin-bottom: 21px;
+}
+#searchBarText {
+  border-radius: 30px;
+  border: none;
+  height: 30px;
+  width: 20%;
+  color: #291512;
+  font-weight: bolder;
+  background-color: #f0dba2;
+}
+#searchButton {
+  width: 14%;
+  height: 31px;
+  border-radius: 53px;
+  border: none;
+  background-color: #291512;
+  color: wheat;
+}
+#searchButton:hover{
+  cursor: pointer;
+}
+/* -------------content----------------- */
+img {
+  width: 150px;
+  height: 150px;
+}
+.items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: 0 auto;
+}
+.item {
+  margin-left: 14px;
+  margin-top: 7px;
+}
+.item p {
+  background-color: rgb(255, 255, 255);
+  margin-top: 0px;
+  height: 36px;
+  position: relative; /* top: -18px; */
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.bigItem {
+  width: auto;
+  margin: 0 auto;
+  border: 3px solid rgb(237 172 100);
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+/* -------------------------- */
+.hidden {
+  display: none;
+}

@@ -1,5 +1,5 @@
-// ----------------create a hex value named colorElement-----------------------
-// ----------------------------------------------------------------------------
+// -----create a hex value named colorElement-----
+// --------------------------------------------------
 hexValues = ["A", "B", "C", "D", "E", "F", 0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 colorElement = "";
 function createHexColor() {
@@ -10,15 +10,51 @@ function createHexColor() {
   colorElement = "#" + colorElement;
   return colorElement;
 }
-// -----put the result of the function into "chosenColor" variable----and show it on web page----
-// ----------------------------------------------------------------------------------------------
+// -----put the result of the function into "chosenColor" variable---
+// ----and show it on web page-----------------------
 let chosenColor = createHexColor();
 document.getElementById("color").innerHTML = chosenColor;
 
-// ----------select body element and chage its style to our chosen color---------------------
-// ------------------------------------------------------------------------------------------
+// --select body element and chage its style to our chosen color---
+// --------------------------------------------------
 function changeColor() {
   document.querySelector("body").style.background = chosenColor;
 }
 
 changeColor();
+
+
+// -----------------project2--------------------
+// =============================================
+
+const allItems = document.getElementsByClassName("item");
+let allBigItems = document.getElementsByClassName("bigItem");
+
+
+function searchedText() {
+  let Text = document.getElementById("searchBarText").value;
+  Text = Text.toLowerCase();
+  for (let item = 0; item < allItems.length; item++) {
+    if (allItems[item].innerHTML === Text) {
+      allBigItems[item].classList.remove("hidden");
+    } else {
+      allBigItems[item].classList.add("hidden");
+    }
+  }
+}
+
+function filter(filterName) {
+  if (filterName === "All") {
+    for (let item = 0; item < allItems.length; item++) {
+      allBigItems[item].classList.remove("hidden");
+    }
+  } else {
+    for (let item = 0; item < allItems.length; item++) {
+      if (allItems[item].innerHTML === filterName) {
+        allBigItems[item].classList.remove("hidden");
+      } else {
+        allBigItems[item].classList.add("hidden");
+      }
+    }
+  }
+}
