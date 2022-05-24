@@ -4,7 +4,8 @@ hexValues = ["A", "B", "C", "D", "E", "F", 0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 colorElement = "";
 function createHexColor() {
   for (let index = 0; index < 6; index++) {
-    let colorElementParts = hexValues[Math.floor(Math.random() * hexValues.length)];
+    let colorElementParts =
+      hexValues[Math.floor(Math.random() * hexValues.length)];
     colorElement = colorElement + colorElementParts;
   }
   colorElement = "#" + colorElement;
@@ -23,13 +24,11 @@ function changeColor() {
 
 changeColor();
 
-
 // -----------------project2--------------------
 // =============================================
 
 const allItems = document.getElementsByClassName("item");
 let allBigItems = document.getElementsByClassName("bigItem");
-
 
 function searchedText() {
   let Text = document.getElementById("searchBarText").value;
@@ -58,3 +57,74 @@ function filter(filterName) {
     }
   }
 }
+
+// -----------------MODAL-----------------------
+// =============================================
+
+const allImages = document.querySelectorAll(".img");
+
+const modalElement = document.getElementById("modalMain");
+
+const body = document.getElementById("body");
+
+let modalImages = [];
+
+allImages.forEach((item) => {
+  modalImages.push(item.src);
+});
+
+// ------------------------------------
+// ----- main function for showing pics
+
+function modal(i) {
+
+  // ------------------------
+  // -- show selected Image
+  document.getElementById("modalImage").src = modalImages[i];
+  modalElement.style.display = "flex";
+  document.getElementById("body").style.overflow = "hidden";
+  // ------------------------
+  // ----- left arrow for prev img
+
+  let leftArroww = document.getElementById("leftArrow");
+  leftArroww.addEventListener("click", function () {
+    i--;
+    if (i < 0) {
+      i = Number(modalImages.length - 1);
+      document.getElementById("modalImage").src = modalImages[i];
+      modalElement.style.display = "flexbox";
+    } else {
+      document.getElementById("modalImage").src = modalImages[i];
+      modalElement.style.display = "flexbox";
+    }
+  });
+
+  // ------------------------
+  // ----- right arrow for next img
+  let rightArroww = document.getElementById("rightArrow");
+  rightArroww.addEventListener("click", function () {
+    i++;
+    if (i > Number(modalImages.length) - 1) {
+      i = 0;
+      document.getElementById("modalImage").src = modalImages[i];
+      modalElement.style.display = "flex";
+    } else {
+      document.getElementById("modalImage").src = modalImages[i];
+      modalElement.style.display = "flex";
+    }
+  });
+}
+
+// ---------------------------------
+// -------main func of close button-
+const targetDiv = document.getElementById("modalMain");
+const btn = document.getElementById("closeButton");
+btn.onclick = function () {
+  if (targetDiv.style.display !== "none") {
+    targetDiv.style.display = "none";
+    document.getElementById("body").style.overflow = "auto";
+  } else {
+    targetDiv.style.display = "flex";
+    document.getElementById("body").style.overflow = "auto";
+  }
+};
