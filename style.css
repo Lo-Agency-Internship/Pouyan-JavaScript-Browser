@@ -25,9 +25,9 @@ li {
   display: inline-block;
 }
 li input:hover {
-    cursor: pointer;;
-  }
-  
+  cursor: pointer;
+}
+
 input {
   text-decoration: none;
   color: black;
@@ -45,13 +45,14 @@ input {
   padding-left: 0px;
   margin: 0px 45px 6px 26px;
   background-color: blanchedalmond;
-width: 70px;}
+  width: 70px;
+}
 
 .buttons:hover {
-    background-color: rgb(236, 174, 81);
-    color: white;
-    cursor: pointer;
-  }
+  background-color: rgb(236, 174, 81);
+  color: white;
+  cursor: pointer;
+}
 #category {
   font-weight: bolder;
   color: #6d3a33;
@@ -83,11 +84,11 @@ width: 70px;}
   background-color: #291512;
   color: wheat;
 }
-#searchButton:hover{
+#searchButton:hover {
   cursor: pointer;
 }
 /* -------------content----------------- */
-img {
+.img {
   width: 150px;
   height: 150px;
 }
@@ -124,4 +125,97 @@ img {
 /* -------------------------- */
 .hidden {
   display: none;
+}
+
+/* -------------MODAL------------ */
+
+#modalMain {
+  display: none;
+  position: sticky;
+  flex-direction: column;
+  z-index: 1;
+  left: 0;
+  bottom: 201px;
+  width: 68%;
+  margin: 0 auto;
+  height: 362px;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+}
+/* --------------------- */
+#closeButton {
+  width: 50px;
+  height: 50px;
+  background-color: #bfffa1;
+  border-radius: 14px;
+}
+
+#closeButton:hover {
+  cursor: pointer;
+  background-color: #51ff00;
+  border-radius: 14px;
+}
+/* -------------------- */
+#modalContent {
+  display: flex;
+  flex-direction: row;
+  background-color: #aac2b3;
+  position: sticky;
+  width: 87%;
+  height: 400px;
+  z-index: -1;
+  border: 8px double #54b826;
+  align-items: center;
+}
+
+#leftArrow{
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  left: 73%;
+  z-index: 2;
+  background-color: #bfffa1;
+  border-radius: 25px;
+}
+#rightArrow {
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  left: 73%;
+  z-index: 2;
+  background-color: #bfffa1;
+  border-radius: 25px;
+}
+#leftArrow:hover {
+  cursor: pointer;
+  background-color: #4fff00;
+  border-radius: 25px;
+}
+#rightArrow:hover {
+  cursor: pointer;
+  background-color: #4fff00;
+  border-radius: 25px;
+}
+#modalImage {
+  width: 72%;
+  position: absolute;
+  height: 100%;
+  left: 14%; /* border: 8px double gold; */
+  /* z-index: 0; */
+}
+
+#leftArrow {
+  transform: rotate(-180deg);
+  position: sticky;
+  left: 5px;
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+  position: sticky;
+  left: 23%;
+  z-index: 2;
+  background-color: #91e86a;
+  border-radius: 25px;
+  -webkit-transform: rotate(-180deg);
 }
