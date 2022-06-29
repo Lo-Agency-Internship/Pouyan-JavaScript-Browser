@@ -219,3 +219,33 @@ input {
   border-radius: 25px;
   -webkit-transform: rotate(-180deg);
 }
+/* =============================================== */
+/* ====TO DO LIST================================= */
+
+.section{
+  width: 50%;
+  margin: 5px auto;
+  background-color: bisque;
+  text-align: center;
+  border-radius: 10px;
+}
+
+button{
+  display: flex;
+  background-color: rgb(33, 30, 30);
+  border-radius: 5px;
+  color: blanchedalmond;
+  margin: 0 auto;
+}
+p{
+  font-style:oblique;
+  font-weight: bolder;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+#toDoItem{
+  width: 99%;
+  margin-bottom: 10px;
+  background-color: #adb560;
+}

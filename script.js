@@ -128,3 +128,38 @@ btn.onclick = function () {
     document.getElementById("body").style.overflow = "auto";
   }
 };
+
+// -----------------TO DO LIST-----------------------
+// =============================================
+
+function addItem() {
+  let toDoItem = document.getElementById("toDoItem").value;
+  if (toDoItem) {
+    let list = document.getElementById("listItem");
+
+    let entry = document.createElement("p");
+    entry.innerHTML = "<hr>"
+    entry.style ="list-style: none; padding-bottom: 10px"
+    entry.appendChild(document.createTextNode(toDoItem));
+
+    list.appendChild(entry);
+
+    let delBtn = document.createElement("button");
+    
+    delBtn.innerHTML = "DELETE";
+    delBtn.onclick = function Delete(e) {
+      var target = e.target;
+      target.parentNode.remove();
+    };
+    entry.appendChild(delBtn);
+  } else {
+    alert("first type a task name!");
+  }
+}
+
+function clearAll() {
+  let list = document.getElementById("listItem");
+  while (list.hasChildNodes()) {
+    list.removeChild(list.firstChild);
+  }
+}
